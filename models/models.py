@@ -7,5 +7,5 @@ class hremployee(models.Model):
     user_id = fields.Many2one('hr.employee', string='Sales', default=lambda self: self.env.user)
 
 class hrdepartment(models.Model):
-    _inherit = {'hr.department': 'department_id'}
+    _inherits = {'hr.department': 'department_id'}
     department_id = fields.Many2one('hr.department', string='Department')
