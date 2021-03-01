@@ -7,6 +7,6 @@ class hremployee(models.Model):
     user_id = fields.Many2one('hr.employee', string='Sales', default=lambda self: self.env.user)
 
 class hrdepartment(models.Model):
-    _inherits = 'hr.department'
-    #department_id = fields.Many2one('hr.department', string='Department')
-    #member_ids = fields.One2many('hr.employee', 'department_id', string='Members', readonly=True)
+    _inherit = 'hr.department'
+    department_id = fields.Many2one('hr.department', string='Department')
+    member_ids = fields.One2many('hr.employee', 'department_id', string='Members', readonly=True)
