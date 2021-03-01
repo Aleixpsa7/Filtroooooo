@@ -4,7 +4,10 @@ from odoo import models, fields, api
 
 class hremployee(models.Model):
     _inherit = 'hr.employee'
-    department_id = fields.Many2one('hr.department', 'Department')
 
-class respartner2(models.Model):
-    sales_id = fields.Many2one('res.partner', string='Sales', domain=[('department_id','=', 'Sales')])
+class hrdepartment(models.Model):
+    _inherit = 'hr.department'
+
+class respartner(models.Model):
+    _inherit = 'res.partner'
+    user_id = fields.Many2one('res.partner', string='Sales', domain=[('hrdepartment.name','=', 'Sales')])
