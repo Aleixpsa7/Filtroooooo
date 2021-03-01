@@ -10,4 +10,4 @@ class hrdepartment(models.Model):
 
 class respartner(models.Model):
     _inherit = 'res.partner'
-    user_id = fields.Many2one('res.partner', string='Sales', domain=[('hrdepartment.name','=', 'Sales')])
+    user_id = fields.Many2one('res.partner', string='Sales', domain=[('department_id.name','=', 'Sales')])
