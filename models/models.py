@@ -12,4 +12,5 @@ class respartner(models.Model):
     _inherit = 'res.partner'
 
 class filtro(models.Model):
+    __name: "filtro.sales"
     sales_id = fields.Many2one('res.partner', string='Sales', domain=[('department_id.name','=', 'Sales')])
