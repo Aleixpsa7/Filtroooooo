@@ -8,5 +8,5 @@ class hremployee(models.Model):
 
 class hrdepartment(models.Model):
     _inherits = 'hr.department'
-    department_id = fields.Many2one('hr.department', string='Department')
-    member_ids = fields.One2many('hr.employee', 'department_id', string='Members', readonly=True)
+    #department_id = fields.Many2one('hr.department', string='Department')
+    #member_ids = fields.One2many('hr.employee', 'department_id', string='Members', readonly=True)
